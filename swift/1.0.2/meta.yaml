@@ -1,0 +1,25 @@
+package:
+  name: swift
+  version: "1.0.2"
+
+source:
+  fn: swift-1.0.2.tar.gz
+  url: https://pypi.python.org/packages/source/s/swift/swift-1.0.2.tar.gz
+  md5: 3e5bcda0280360833981387796cfecdb
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  commands:
+    - st -h
+
+about:
+  home: https://launchpad.net/swift
+  license: Apache Software License
+  summary: "Simple, REST-based API for OpenStack's distributed object storage system"
