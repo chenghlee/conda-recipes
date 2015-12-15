@@ -1,0 +1,26 @@
+package:
+  name: futures
+  version: "3.0.3"
+
+source:
+  fn: futures-3.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/f/futures/futures-3.0.3.tar.gz
+  md5: "32171f72af7e80c266310794adc4db46"
+
+requirements:
+  build:
+    - python  # [py2k]
+    - setuptools
+
+  run:
+    - python  # [py2k]
+
+test:
+  imports:
+    - concurrent
+    - concurrent.futures
+
+about:
+  home: https://github.com/agronholm/pythonfutures
+  license: BSD License
+  summary: 'Backport of the concurrent.futures package from Python 3.2'

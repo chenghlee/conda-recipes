@@ -1,0 +1,58 @@
+package:
+  name: pbr
+  version: "1.8.1"
+
+source:
+  fn: pbr-1.8.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pbr/pbr-1.8.1.tar.gz
+  md5: "c8f9285e1a4ca6f9654c529b158baa3a"
+
+build:
+  preserve_egg_dir: True
+  entry_points:
+    - pbr = pbr.cmd.main:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - setuptools
+
+test:
+  imports:
+    - pbr
+    - pbr.cmd
+    - pbr.hooks
+    # Sub-package for running internal/developer tests that "end users" should
+    # not really have to interact with; so, as long as the modules above import
+    # correctly, we'll declare the "conda build" tests as passed. One major
+    # plus of ignoring this is not having to about creating Conda packages for
+    # the huge list of dependencies in "requires" subsection below.
+    #- pbr.tests
+
+  commands:
+    - pbr --help
+
+  # These packages are required only if we want to run the "pbr.tests" above.
+  #requires:
+  #  - coverage >=3.6
+  #  - discover
+  #  - fixtures >=1.3.1
+  #  - hacking <0.11,>=0.10.0
+  #  - mock >=1.2
+  #  - python-subunit >=0.0.18
+  #  - six >=1.9.0
+  #  - sphinx !=1.2.0,!=1.3b1,<1.3,>=1.1.2
+  #  - testrepository >=0.0.18
+  #  - testresources >=0.2.4
+  #  - testscenarios >=0.4
+  #  - testtools >=1.4.0
+  #  - virtualenv
+
+about:
+  home: https://launchpad.net/pbr
+  license: Apache Software License
+  summary: 'Python Build Reasonableness'
