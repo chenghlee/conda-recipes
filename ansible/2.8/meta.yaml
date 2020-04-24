@@ -1,0 +1,81 @@
+{% set name = "ansible" %}
+{% set version = "2.8.11" %}
+{% set sha256 = "156caa8b6c60b9f0d5c7d57ee0f4e46d8e226147b58546be6a8ac52925a9c191" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  fn: "{{ name|lower }}-{{ version }}.tar.gz"
+  url:
+    - "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "{{ sha256 }}"
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+  noarch: python
+
+requirements:
+  host:
+    - python {{ python }}
+    - pip
+  run:
+    - python
+    - cryptography
+    - jinja2
+    - pyyaml
+
+test:
+  commands:
+    - ansible --version
+    - ansible-config --version
+    #- ansible-connection --version   # hangs waiting for input
+    - ansible-console --version
+    - ansible-doc --version
+    - ansible-galaxy --version
+    - ansible-inventory --version
+    - ansible-playbook --version
+    - ansible-pull --version
+    - ansible-vault --version
+
+  # Way too many modules to comprehensively list and test here, so for now,
+  # just test import some (common) modules used to develop "custom" Ansible
+  # modules, filters, and plugins.
+  imports:
+    - ansible.module_utils.api
+    - ansible.module_utils.basic
+    - ansible.module_utils.common.dict_transformations
+    - ansible.module_utils.common.file
+    - ansible.module_utils.common.network
+    - ansible.module_utils.common.parameters
+    - ansible.module_utils.common.sys_info
+    - ansible.module_utils.common.text.converters
+    - ansible.module_utils.common.text.formatters
+    - ansible.module_utils.common.validation
+    - ansible.module_utils.distro
+    - ansible.module_utils.facts
+    - ansible.module_utils.json_utils
+    - ansible.module_utils.known_hosts
+    - ansible.module_utils.network.common.config
+    - ansible.module_utils.network.common.network
+    - ansible.module_utils.network.common.parsing
+    - ansible.module_utils.network.common.utils
+    - ansible.module_utils.parsing.convert_bool
+    - ansible.module_utils.six
+    - ansible.module_utils.splitter
+    - ansible.module_utils.urls
+
+about:
+  home: "https://ansible.com/"
+  license: GPL-3
+  license_family: GPL
+  license_file: COPYING
+  summary: "Radically simple IT automation"
+  doc_url: "https://docs.ansible.com/ansible/2.8/index.html"
+  dev_url: "https://github.com/ansible/ansible"
+
+extra:
+  recipe-maintainers:
+    - chenghlee
