@@ -1,0 +1,12 @@
+[submodule "resolvelib-feedstock"]
+	path = resolvelib-feedstock
+	url = ../resolvelib-feedstock
+	branch = main
+[submodule "ansible-core-feedstock"]
+	path = ansible-core-feedstock
+	url = ../ansible-core-feedstock
+	branch = maint-2.13.x
+[submodule "ansible-feedstock"]
+	path = ansible-feedstock
+	url = ../ansible-feedstock
+	branch = maint-6.x
