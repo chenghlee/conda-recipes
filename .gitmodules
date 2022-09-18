@@ -10,3 +10,7 @@
 	path = ansible-feedstock
 	url = ../ansible-feedstock
 	branch = maint-6.x
+[submodule "xattr-feedstock"]
+	path = xattr-feedstock
+	url = ../xattr-feedstock
+	branch = main

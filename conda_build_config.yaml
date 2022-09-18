@@ -1,0 +1,32 @@
+CONDA_BUILD_SYSROOT:        # [osx]
+  - /opt/MacOSX10.13.sdk    # [osx and x86_64]
+  - /opt/MacOSX11.0.sdk     # [osx and arm64]
+
+MACOSX_DEPLOYMENT_TARGET:   # [osx]
+  - 10.13                   # [osx and x86_64]
+  - 11.0                    # [osx and arm64]
+
+macos_min_version:          # [osx]
+  - 10.13                   # [osx and x86_64]
+  - 11.0                    # [osx and arm64]
+
+c_compiler:
+  - gcc                     # [linux]
+  - clang                   # [osx]
+
+cxx_compiler:
+  - gxx                     # [linux]
+  - clangxx                 # [osx]
+
+c_compiler_version:
+  - 11.*                    # [linux]
+  - 12.*                    # [osx]
+
+cxx_compiler_version:
+  - 11.*                    # [linux]
+  - 12.*                    # [osx]
+
+python:
+  - 3.8
+  - 3.9
+  - 3.10
