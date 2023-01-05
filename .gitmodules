@@ -14,3 +14,7 @@
 	path = xattr-feedstock
 	url = ../xattr-feedstock
 	branch = main
+[submodule "sphinx_rtd_theme-feedstock"]
+	path = sphinx_rtd_theme-feedstock
+	url = ../sphinx_rtd_theme-feedstock
+	branch = main
