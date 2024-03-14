@@ -21,3 +21,6 @@
 [submodule "asv-feedstock"]
 	path = asv-feedstock
 	url = ../asv-feedstock
+[submodule "osslsigncode-feedstock"]
+	path = osslsigncode-feedstock
+	url = ../osslsigncode-feedstock
