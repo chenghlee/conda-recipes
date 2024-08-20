@@ -24,3 +24,7 @@
 [submodule "osslsigncode-feedstock"]
 	path = osslsigncode-feedstock
 	url = ../osslsigncode-feedstock
+[submodule "innoextract-feedstock"]
+	path = innoextract-feedstock
+	url = ../innoextract-feedstock
+	branch = main
