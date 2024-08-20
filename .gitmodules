@@ -28,3 +28,7 @@
 	path = innoextract-feedstock
 	url = ../innoextract-feedstock
 	branch = main
+[submodule "unrar-feedstock"]
+	path = unrar-feedstock
+	url = ../unrar-feedstock
+	branch = main
