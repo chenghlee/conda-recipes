@@ -32,3 +32,7 @@
 	path = unrar-feedstock
 	url = ../unrar-feedstock
 	branch = main
+[submodule "gogcheck-feedstock"]
+	path = gogcheck-feedstock
+	url = ../gogcheck-feedstock
+	branch = main
