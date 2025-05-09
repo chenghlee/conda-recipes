@@ -36,3 +36,19 @@
 	path = gogcheck-feedstock
 	url = ../gogcheck-feedstock
 	branch = main
+[submodule "httplib2-feedstock"]
+	path = httplib2-feedstock
+	url = https://github.com/conda-forge/httplib2-feedstock
+	branch = main
+[submodule "uritemplate-feedstock"]
+	path = uritemplate-feedstock
+	url = https://github.com/conda-forge/uritemplate-feedstock
+	branch = main
+[submodule "google-auth-httplib2-feedstock"]
+	path = google-auth-httplib2-feedstock
+	url = https://github.com/conda-forge/google-auth-httplib2-feedstock
+	branch = main
+[submodule "google-api-python-client-feedstock"]
+	path = google-api-python-client-feedstock
+	url = https://github.com/conda-forge/google-api-python-client-feedstock
+	branch = main
