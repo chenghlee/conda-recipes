@@ -26,7 +26,10 @@ cxx_compiler_version:
   - 11.*                    # [linux]
   - 12.*                    # [osx]
 
+python_min: "3.10"
+
 python:
-  - 3.8
-  - 3.9
-  - 3.10
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"
