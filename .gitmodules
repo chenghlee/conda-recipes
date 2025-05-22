@@ -5,11 +5,11 @@
 [submodule "ansible-core-feedstock"]
 	path = ansible-core-feedstock
 	url = ../ansible-core-feedstock
-	branch = maint-2.13.x
+	branch = maint-2.18.x
 [submodule "ansible-feedstock"]
 	path = ansible-feedstock
 	url = ../ansible-feedstock
-	branch = maint-6.x
+	branch = maint-11.x
 [submodule "xattr-feedstock"]
 	path = xattr-feedstock
 	url = ../xattr-feedstock
@@ -51,4 +51,8 @@
 [submodule "google-api-python-client-feedstock"]
 	path = google-api-python-client-feedstock
 	url = https://github.com/conda-forge/google-api-python-client-feedstock
+	branch = main
+[submodule "netaddr-feedstock"]
+	path = netaddr-feedstock
+	url = ../netaddr-feedstock
 	branch = main
