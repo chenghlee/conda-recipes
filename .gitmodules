@@ -56,3 +56,12 @@
 	path = netaddr-feedstock
 	url = ../netaddr-feedstock
 	branch = main
+[submodule "myst-parser-feedstock"]
+	path = myst-parser-feedstock
+	url = ../myst-parser-feedstock
+[submodule "mdit-py-plugins-feedstock"]
+	path = mdit-py-plugins-feedstock
+	url = ../mdit-py-plugins-feedstock
+[submodule "markdown-it-py-feedstock"]
+	path = markdown-it-py-feedstock
+	url = ../markdown-it-py-feedstock
