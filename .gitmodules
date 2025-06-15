@@ -65,3 +65,6 @@
 [submodule "markdown-it-py-feedstock"]
 	path = markdown-it-py-feedstock
 	url = ../markdown-it-py-feedstock
+[submodule "pymem-feedstock"]
+	path = pymem-feedstock
+	url = ../pymem-feedstock
